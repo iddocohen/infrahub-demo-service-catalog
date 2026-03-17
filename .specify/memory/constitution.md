@@ -153,9 +153,9 @@ informal agreements.
 - **Amendments**: Any principle change MUST be documented with a
   version bump, rationale, and updated Sync Impact Report.
 - **Versioning**: Follows semantic versioning:
-  - MAJOR: Principle removal or incompatible redefinition.
-  - MINOR: New principle or material expansion of existing guidance.
-  - PATCH: Clarifications, wording, or non-semantic refinements.
+    - MAJOR: Principle removal or incompatible redefinition.
+    - MINOR: New principle or material expansion of existing guidance.
+    - PATCH: Clarifications, wording, or non-semantic refinements.
 - **Compliance review**: All PRs SHOULD be checked against these
   principles. Reviewers MAY reference specific principle numbers
   (e.g., "violates Principle II") in review comments.
