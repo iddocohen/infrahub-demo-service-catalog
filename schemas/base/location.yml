@@ -14,8 +14,7 @@ generics:
       - shortname__value
     order_by:
       - name__value
-    display_labels:
-      - name__value
+    display_label: name__value
     attributes:
       - name: name
         kind: Text
@@ -53,8 +52,10 @@ generics:
         peer: IpamPrefix
         cardinality: many
         optional: true
+        identifier: location__prefixes
       - name: devices
         label: Devices
         peer: DcimPhysicalDevice
         cardinality: many
         optional: true
+        identifier: location__devices
