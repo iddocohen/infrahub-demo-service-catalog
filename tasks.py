@@ -51,13 +51,28 @@ def restart(context: Context) -> None:
         context.run(compose_cmd, pty=True)
 
 
-@task(name="format")
-def format_all(context: Context) -> None:
-    """Run RUFF to format all Python files."""
+@task
+def format_python(context: Context) -> None:
+    """Run ruff to format all Python files."""
     exec_cmds = ["ruff format .", "ruff check . --fix"]
     with context.cd(MAIN_DIRECTORY_PATH):
         for cmd in exec_cmds:
             context.run(cmd, pty=True)
+
+
+@task
+def format_markdown(context: Context) -> None:
+    """Run rumdl to format all Markdown files."""
+    exec_cmd = "rumdl check --fix ."
+    with context.cd(MAIN_DIRECTORY_PATH):
+        context.run(exec_cmd, pty=True)
+
+
+@task(name="format")
+def format_all(context: Context) -> None:
+    """Run all formatters."""
+    format_python(context)
+    format_markdown(context)
 
 
 @task
@@ -87,12 +102,22 @@ def lint_ruff(context: Context) -> None:
         context.run(exec_cmd, pty=True)
 
 
+@task
+def lint_rumdl(context: Context) -> None:
+    """Run rumdl to check all Markdown files."""
+    print(" - Check code with rumdl")
+    exec_cmd = "rumdl check ."
+    with context.cd(MAIN_DIRECTORY_PATH):
+        context.run(exec_cmd, pty=True)
+
+
 @task(name="lint")
 def lint_all(context: Context) -> None:
     """Run all linters."""
     lint_yaml(context)
     lint_ruff(context)
     lint_mypy(context)
+    lint_rumdl(context)
 
 
 @task(name="docs")

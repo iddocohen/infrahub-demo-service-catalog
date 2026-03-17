@@ -180,7 +180,6 @@ loopback
 Loopback
 loopbacks
 Loopbacks
-markdownlint
 max_count
 Mbps
 MDX
@@ -260,6 +259,7 @@ reusability
 Reusability
 ripgrep
 ruff
+rumdl
 Schema
 schema's
 schema_mapping
