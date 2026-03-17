@@ -26,6 +26,7 @@ dev = [
     "types-requests>=2.32.0",
     "yamllint>=1.37.1",
     "infrahub-testcontainers>=1.7.7",
+    "rumdl>=0.1.0",
 ]
 
 [tool.pytest.ini_options]
@@ -127,6 +128,26 @@ max-complexity = 17
 "tasks.py" = [
     "PLC0415", # `import` should be at the top-level of a file
 ]
+
+[tool.rumdl]
+disable = [
+    "MD013",
+    "MD014",
+    "MD024",
+    "MD029",
+    "MD033",
+    "MD034",
+    "MD036",
+    "MD041",
+    "MD045",
+    "MD047",
+]
+
+[tool.rumdl.MD007]
+indent = 4
+
+[tool.rumdl.MD025]
+front-matter-title = ""
 
 [build-system]
 requires = ["setuptools>=45", "wheel"]

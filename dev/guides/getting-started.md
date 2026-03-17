@@ -55,4 +55,4 @@
 ### Documentation
 
 - `invoke docs` - Build documentation (requires npm in docs/ directory)
-- `markdownlint docs/docs/**/*.mdx` - Lint documentation files
+- `rumdl check docs/docs/**/*.mdx` - Lint documentation files

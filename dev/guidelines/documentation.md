@@ -2,17 +2,17 @@
 
 ## Linting and Formatting
 
-When working on documentation files (`.mdx`), always run markdownlint to ensure consistent formatting:
+When working on documentation files (`.mdx`), always run rumdl to ensure consistent formatting:
 
 ```bash
 # Check all documentation files
-markdownlint docs/docs/**/*.mdx
+rumdl check docs/docs/**/*.mdx
 
 # Fix auto-fixable issues
-markdownlint docs/docs/**/*.mdx --fix
+rumdl check --fix docs/docs/**/*.mdx
 ```
 
-### Common Markdownlint Rules
+### Common rumdl rules
 
 - **MD032**: Lists must be surrounded by blank lines
 - **MD022**: Headings must be surrounded by blank lines
@@ -99,7 +99,7 @@ vale docs/docs/getting-started/*.mdx
 
 - Documentation guidelines: `docs/docs/development/docs.mdx`
 - Vale styles: `.vale/styles/`
-- Markdown linting: `.markdownlint.yaml`
+- Markdown linting: `pyproject.toml` (under `[tool.rumdl]`)
 
 ## Document Structure Patterns (Following Diataxis)
 
