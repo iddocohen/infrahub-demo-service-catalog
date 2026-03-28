@@ -200,6 +200,8 @@ exceptions:
   - Schema Inheritance
   - Schema Validation Rules
   - SDK
+  - Semaphore
+  - Semaphore UI
   - Separate proxies for HTTP and HTTPS
   - Server Configuration Schema
   - Single sign-on

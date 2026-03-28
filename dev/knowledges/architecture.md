@@ -21,12 +21,20 @@
    - `protocols_*.py` - Type definitions for Infrahub objects
    - Initial data in `data/` - YAML fixtures for demo environment
 
+5. **Semaphore (Ansible Automation)** (`ansible/`, `semaphore/`)
+   - Open-source web UI (SemaphoreUI) for running Ansible playbooks
+   - `ansible/deploy.yml` - Fetches startup-config artifacts from Infrahub and saves them locally
+   - `ansible/inventory.yml` - Dynamic inventory using `opsmill.infrahub.inventory` plugin
+   - `semaphore/Dockerfile` - Custom image with infrahub-sdk and opsmill.infrahub Ansible collection
+   - Accessible at http://localhost:3000 (admin / semaphore)
+
 ## Key Patterns
 
 - **Dependency Injection**: Uses `fast-depends` for managing Infrahub client instances
 - **Resource Allocation**: Automated allocation from pools (VLANs, IP prefixes)
 - **Service Lifecycle**: Services move through states (pending -> active) with associated resource provisioning
 - **Type Safety**: Comprehensive type hints with mypy validation
+- **Configuration Deployment**: Semaphore runs Ansible playbooks that pull generated artifacts from Infrahub and deploy them to devices
 
 ## Environment Configuration
 
@@ -40,3 +48,4 @@ Required environment variable:
 - Infrahub client is cached using `@st.cache_resource` decorator
 - All Infrahub operations should use the dependency-injected client from `infrahub.py`
 - Service generators run asynchronously in Infrahub after service creation
+- Semaphore mounts the `ansible/` directory as its playbook source; changes to playbooks are reflected immediately

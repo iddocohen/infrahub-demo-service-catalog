@@ -62,6 +62,10 @@ uv run pytest
 uv run infrahubctl schema check schemas/
 ```
 
+### Validate Before Committing
+
+Always run `uv run invoke format lint` and confirm it passes without errors before considering any change complete. Fix all reported issues (YAML lint, ruff, mypy, rumdl) before moving on. When modifying documentation files under `docs/`, also run `vale` on the changed files to catch style violations (branded terms, sentence case headings). If new proper nouns appear in headings, add them to `.vale/styles/Infrahub/sentence-case.yml` exceptions.
+
 ### Running CLI Tools
 
 All Python CLI tools (e.g., `infrahubctl`, `pytest`, `invoke`) must be run via `uv run` to ensure they use the project's virtual environment. Never call them directly.
