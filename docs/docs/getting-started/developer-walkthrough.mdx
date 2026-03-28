@@ -798,7 +798,7 @@ The `ansible/deploy.yml` playbook performs two tasks per device:
 The Semaphore container (`semaphore/Dockerfile`) extends the official image with the dependencies needed to interact with Infrahub:
 
 - **infrahub-sdk**: Python SDK installed via pip, required by the Ansible collection
-- **opsmill.infrahub collection**: Ansible collection installed via `ansible-galaxy`, providing the `inventory` plugin and `artifact_fetch` module
+- **`opsmill.infrahub` collection**: Ansible collection installed via `ansible-galaxy`, providing the `inventory` plugin and `artifact_fetch` module
 
 At runtime, the container mounts the `ansible/` directory as its playbook source, so any changes to playbooks or inventory are reflected immediately without rebuilding.
 
