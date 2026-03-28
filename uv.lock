@@ -569,10 +569,10 @@ requires-dist = [
 dev = [
     { name = "infrahub-testcontainers", specifier = ">=1.7.7" },
     { name = "mypy", specifier = ">=1.19.1" },
-    { name = "pytest", specifier = ">=8.0.0,<9" },
+    { name = "pytest", specifier = ">=8.0.0,<10" },
     { name = "pytest-asyncio", specifier = ">=0.23.0,<1" },
     { name = "pytest-clarity", specifier = ">=1.0.1" },
-    { name = "pytest-httpx", specifier = ">=0.30.0,<0.35" },
+    { name = "pytest-httpx", specifier = ">=0.30.0,<0.37" },
     { name = "ruff", specifier = ">=0.14.4" },
     { name = "rumdl", specifier = ">=0.1.0" },
     { name = "types-pyyaml", specifier = ">=6.0.12" },
