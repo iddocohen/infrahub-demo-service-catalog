@@ -114,11 +114,11 @@ export INFRAHUB_API_TOKEN="your-api-token"
   any server-dependent workflow
 - For offline work (no server available), limit to local
   validation:
-  - YAML linting and structure checks
-  - Python syntax verification (`python -m py_compile`)
-  - File and directory structure review against
+    - YAML linting and structure checks
+    - Python syntax verification (`python -m py_compile`)
+    - File and directory structure review against
     `.infrahub.yml`
-  - Schema YAML format checks (correct keys, naming
+    - Schema YAML format checks (correct keys, naming
     conventions)
 - Set `INFRAHUB_ADDRESS` and `INFRAHUB_API_TOKEN` in your
   shell profile or `.env` file for consistent config

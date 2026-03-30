@@ -25,7 +25,7 @@ Infrahub skills. It is not meant to be invoked directly.
 - **`infrahub-yml-reference.md`** — `.infrahub.yml`
   configuration file format and field reference
 - **`rules/`** — Cross-cutting rules shared across skills:
-  - Caching display labels in queries
-  - Python environment and connectivity checks
-  - Git integration and deployment patterns
-  - Generated file protocol conventions
+    - Caching display labels in queries
+    - Python environment and connectivity checks
+    - Git integration and deployment patterns
+    - Generated file protocol conventions

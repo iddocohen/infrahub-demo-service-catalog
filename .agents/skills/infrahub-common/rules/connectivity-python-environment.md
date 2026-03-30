@@ -74,8 +74,8 @@ example, if `uv run` works, always use
   command
 - Look for hints in `pyproject.toml` before trying
   commands:
-  - `[tool.uv]` section present -- try `uv run` first
-  - `[tool.poetry]` section present -- try `poetry run`
+    - `[tool.uv]` section present -- try `uv run` first
+    - `[tool.poetry]` section present -- try `poetry run`
     first
 - Reuse the detected prefix consistently throughout
   the session
