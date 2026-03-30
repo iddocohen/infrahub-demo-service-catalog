@@ -5,5 +5,5 @@ spec:
   kind: CoreRepository
   data:
     - name: "infrahub-demo-service-catalog"
-      location: "https://github.com/opsmill/infrahub-demo-service-catalog.git"
-      ref: "main"
+      location: "/upstream"
+      default_branch: "dga-20260330"
