@@ -6,7 +6,8 @@ x-infrahub-custom-build: &infrahub_custom_build
     dockerfile: Dockerfile
     args:
       INFRAHUB_BASE_VERSION: "${INFRAHUB_BASE_VERSION:-1.7.7}"
-
+  environment:
+    INFRAHUB_GIT_IMPORT_SYNC_BRANCH_NAMES: '["^demo/.*$"]'
 services:
   service-catalog:
     <<: *infrahub_custom_build
