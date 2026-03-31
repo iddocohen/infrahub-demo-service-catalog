@@ -281,10 +281,12 @@ def init_semaphore(
 @task(name="init", pre=[init_semaphore])
 def init(context: Context) -> None:
     """Initialize the demo."""
-    exec_cmd = "uv run infrahubctl object load repository.yaml"
-
+    exec_cmd = [
+        "uv run infrahubctl object load repository.yaml",
+        "uv run infrahubctl object load permissions.yml"
+    ]
     with context.cd(MAIN_DIRECTORY_PATH):
-        output = context.run(exec_cmd)
-
-    if output is not None and output.exited != 0:
-        sys.exit(-1)
+        for cmd in exec_cmd:
+            output = context.run(cmd)
+            if output is not None and output.exited != 0:
+                sys.exit(-1)
