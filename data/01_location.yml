@@ -10,13 +10,6 @@ spec:
       children:
         kind: LocationMetro
         data:
-          - name: "Lyon"
-            shortname: "lyn"
-            children:
-              kind: LocationSite
-              data:
-                - name: "Lyon 1"
-                  shortname: "lyn01"
           - name: "Paris"
             shortname: "par"
             children:
@@ -37,11 +30,23 @@ spec:
               data:
                 - name: "Brussels 1"
                   shortname: "bru01"
-    - name: "Netherlands"
-      shortname: "NL"
-      timezone: "CET"
+    - name: "United States"
+      shortname: "US"
+      timezone: "EST"
       children:
         kind: LocationMetro
         data:
-          - name: "Amsterdam"
-            shortname: "ams"
+          - name: "New York"
+            shortname: "nyc"
+            children:
+              kind: LocationSite
+              data:
+                - name: "New York 1"
+                  shortname: "nyc01"
+          - name: "Dallas"
+            shortname: "dal"
+            children:
+              kind: LocationSite
+              data:
+                - name: "Dallas 1"
+                  shortname: "dal01"
