@@ -17,6 +17,10 @@ queries:
   - name: device_info
     file_path: "templates/device_info.gql"
 
+# MENU
+menus:
+  - menu.yml
+
 # SCHEMAS
 schemas:
   - schemas/base
