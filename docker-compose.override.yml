@@ -25,7 +25,8 @@ services:
       - ./:/upstream
   task-manager:
     <<: *infrahub_custom_build
-
+    ports:
+      - 4200:4200
   semaphore:
     build:
       context: ./semaphore
