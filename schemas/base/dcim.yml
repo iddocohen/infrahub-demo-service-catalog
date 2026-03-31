@@ -6,6 +6,7 @@ generics:
   - name: GenericDevice
     namespace: Dcim
     description: Generic Device object.
+    include_in_menu: false
     label: Device
     icon: mdi:server
     human_friendly_id:
