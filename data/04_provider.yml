@@ -1,0 +1,11 @@
+---
+apiVersion: infrahub.app/v1
+kind: Object
+spec:
+  kind: OrganizationProvider
+  data:
+    - name: "Cogent Communications"
+    - name: "Zayo Group"
+    - name: "Colt Technology Services"
+    - name: "Lumen Technologies"
+    - name: "Equinix"
