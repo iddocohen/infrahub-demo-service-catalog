@@ -535,6 +535,7 @@ version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "fast-depends" },
+    { name = "httpx" },
     { name = "infrahub-sdk", extra = ["all"] },
     { name = "invoke" },
     { name = "streamlit" },
@@ -559,6 +560,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "fast-depends", specifier = ">=3.0.3,<4.0.0" },
+    { name = "httpx", specifier = ">=0.27.2" },
     { name = "infrahub-sdk", extras = ["all"], specifier = ">=1.19.0,<2.0.0" },
     { name = "invoke", specifier = ">=2.2.1,<3.0.0" },
     { name = "streamlit", specifier = ">=1.51.0,<2.0.0" },

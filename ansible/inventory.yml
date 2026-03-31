@@ -13,7 +13,7 @@ nodes:
       - location.name
       - role
       - device_type.name
-      - device_type.platform.ansible_network_os
+      # - device_type.platform.ansible_network_os
       - primary_address.address
       - status
 
@@ -21,5 +21,5 @@ compose:
   hostname: name
   ansible_host: primary_address.address | ansible.utils.ipaddr('address')
   device_type: device_type.name
-  platform: device_type.platform.ansible_network_os
+  # platform: device_type.platform.ansible_network_os
   location: location.name
