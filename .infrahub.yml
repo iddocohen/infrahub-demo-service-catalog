@@ -27,11 +27,12 @@ schemas:
   - schemas/location_minimal
   - schemas/vlan
   - schemas/service
-  - schemas/circuit
+  # - schemas/circuit
 
 # OBJECTS
 objects:
   - data/01_location.yml
+  - data/01_permissions.yml
   - data/02_groups_tags.yml
   - data/03_ipam_domain.yml
   - data/04_manufacturer.yml
@@ -41,7 +42,7 @@ objects:
   - data/06_device_type.yml
   - data/07_device_template.yml
   - data/08_device.yml
-  - data/09_circuit.yml
+  # - data/09_circuit.yml
 
 # TRANSFORMS
 jinja2_transforms:
