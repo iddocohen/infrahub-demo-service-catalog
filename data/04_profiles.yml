@@ -1,0 +1,17 @@
+---
+apiVersion: infrahub.app/v1
+kind: Object
+spec:
+  kind: ProfileDcimInterfaceL3
+  data:
+    - profile_name: "Transit Interface"
+      profile_priority: 1000
+      role: upstream
+      mtu: 1500
+      enabled: true
+    - profile_name: "Peer to Peer Interface"
+      profile_priority: 1000
+      role: backbone
+      mtu: 9000
+      speed: 10000
+      enabled: true
