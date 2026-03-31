@@ -6,4 +6,4 @@ spec:
   data:
     - name: "infrahub-demo-service-catalog"
       location: "/upstream"
-      default_branch: "dga-20260330"
+      default_branch: "main"
