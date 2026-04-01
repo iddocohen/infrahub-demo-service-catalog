@@ -177,7 +177,7 @@ class _SemaphoreClient:
         items: list[dict[str, object]] = self._client.get(list_url).json()
         for item in items:
             if item.get("name") == name:
-                rid = int(item["id"])  # type: ignore[arg-type]
+                rid = int(str(item["id"]))
                 print(f"  '{name}' already exists (id={rid}).")
                 return rid
 
