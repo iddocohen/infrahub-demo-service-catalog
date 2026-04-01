@@ -18,6 +18,7 @@ SEMAPHORE_ADMIN = "admin"
 SEMAPHORE_ADMIN_PASSWORD = "semaphore"  # noqa: S105
 SEMAPHORE_PLAYBOOK_PATH = "/opt/semaphore/playbooks"
 
+
 @task
 def build(context: Context, cache: bool = True) -> None:
     compose_cmd = base_compose_cmd + " build"
@@ -136,8 +137,6 @@ def docs_build(context: Context) -> None:
 
     if output is not None and output.exited != 0:
         sys.exit(-1)
-
-
 
 
 class _SemaphoreClient:
@@ -278,13 +277,11 @@ def init_semaphore(
 
     print("=== Semaphore init complete ===")
 
+
 @task(name="init", pre=[init_semaphore])
 def init(context: Context) -> None:
     """Initialize the demo."""
-    exec_cmd = [
-        "uv run infrahubctl object load repository.yaml",
-        "uv run infrahubctl object load permissions.yml"
-    ]
+    exec_cmd = ["uv run infrahubctl object load repository.yaml", "uv run infrahubctl object load permissions.yml"]
     with context.cd(MAIN_DIRECTORY_PATH):
         for cmd in exec_cmd:
             output = context.run(cmd)
