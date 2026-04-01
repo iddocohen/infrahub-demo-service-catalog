@@ -21,7 +21,13 @@
    invoke start
    ```
 
-3. To stop:
+3. Initialize the demo (seeds Semaphore, loads repository and permissions):
+
+   ```bash
+   invoke init
+   ```
+
+4. To stop:
 
    ```bash
    invoke stop
@@ -36,6 +42,8 @@
 - `invoke stop` - Stop Docker containers
 - `invoke destroy` - Stop and remove volumes
 - `invoke restart` - Restart containers
+- `invoke init` - Initialize demo (seed Semaphore, load repository and permissions)
+- `invoke init-semaphore` - Seed Semaphore only (project, keys, inventory, task template)
 
 ### Code Quality
 
