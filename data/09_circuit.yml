@@ -1,0 +1,123 @@
+---
+apiVersion: infrahub.app/v1
+kind: Object
+spec:
+  kind: DcimCircuit
+  data:
+    # ------------------------------------------------------------
+    # Paris
+    # ------------------------------------------------------------
+    - circuit_id: "COLT-PAR-001"
+      circuit_type: dark_fiber
+      status: active
+      description: "Colt dark fiber Paris to Brussels"
+      provider: "Colt Technology Services"
+      location: "par01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "par01"
+          - name: "Z"
+            status: active
+            location: "bru01"
+    - circuit_id: "COG-PAR-001"
+      circuit_type: upstream
+      status: active
+      description: "Cogent upstream transit in Paris"
+      provider: "Cogent Communications"
+      location: "par01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "par01"
+
+    # ------------------------------------------------------------
+    # Brussels
+    # ------------------------------------------------------------
+    - circuit_id: "ZAYO-BRU-001"
+      circuit_type: upstream
+      status: provisioning
+      description: "Zayo upstream transit in Brussels"
+      provider: "Zayo Group"
+      location: "bru01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: provisioning
+            location: "bru01"
+    - circuit_id: "COLT-BRU-001"
+      circuit_type: peering
+      status: active
+      description: "Colt peering in Brussels"
+      provider: "Colt Technology Services"
+      location: "bru01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "bru01"
+
+    # ------------------------------------------------------------
+    # New York
+    # ------------------------------------------------------------
+    - circuit_id: "COG-NYC-001"
+      circuit_type: upstream
+      status: active
+      description: "Cogent upstream transit in New York"
+      provider: "Cogent Communications"
+      location: "nyc01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "nyc01"
+    - circuit_id: "LUMEN-NYC-001"
+      circuit_type: peering
+      status: active
+      description: "Lumen peering in New York"
+      provider: "Lumen Technologies"
+      location: "nyc01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "nyc01"
+
+    # ------------------------------------------------------------
+    # Dallas
+    # ------------------------------------------------------------
+    - circuit_id: "ZAYO-DAL-001"
+      circuit_type: upstream
+      status: active
+      description: "Zayo upstream transit in Dallas"
+      provider: "Zayo Group"
+      location: "dal01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "dal01"
+    - circuit_id: "EQX-DAL-NYC-001"
+      circuit_type: dark_fiber
+      status: active
+      description: "Equinix dark fiber Dallas to New York"
+      provider: "Equinix"
+      location: "dal01"
+      endpoints:
+        kind: DcimCircuitEndpoint
+        data:
+          - name: "A"
+            status: active
+            location: "dal01"
+          - name: "Z"
+            status: active
+            location: "nyc01"

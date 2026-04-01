@@ -1,12 +1,13 @@
 ---
 x-infrahub-custom-build: &infrahub_custom_build
-  image: opsmill/infrahub-demo-service-catalog:${INFRAHUB_BASE_VERSION:-1.7.7}
+  image: opsmill/infrahub-demo-service-catalog:${INFRAHUB_BASE_VERSION:-1.8.2}
   build:
     context: .
     dockerfile: Dockerfile
     args:
-      INFRAHUB_BASE_VERSION: "${INFRAHUB_BASE_VERSION:-1.7.7}"
-
+      INFRAHUB_BASE_VERSION: "${INFRAHUB_BASE_VERSION:-1.8.2}"
+  environment:
+    INFRAHUB_GIT_IMPORT_SYNC_BRANCH_NAMES: '["^demo/.*$"]'
 services:
   service-catalog:
     <<: *infrahub_custom_build
@@ -24,7 +25,8 @@ services:
       - ./:/upstream
   task-manager:
     <<: *infrahub_custom_build
-
+    ports:
+      - 4200:4200
   semaphore:
     build:
       context: ./semaphore

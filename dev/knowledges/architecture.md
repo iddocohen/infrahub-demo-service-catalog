@@ -17,9 +17,11 @@
    - Example: `implement_dedicated_internet.py` allocates VLANs, IP prefixes, ports, and configures gateways
 
 4. **Data Models**
-   - `schemas/` - Infrahub schema definitions (DCIM, IPAM, services)
+   - `schemas/` - Infrahub schema definitions (DCIM, IPAM, services, and optional circuit schema)
    - `protocols_*.py` - Type definitions for Infrahub objects
-   - Initial data in `data/` - YAML fixtures for demo environment
+   - Initial data in `data/` - YAML fixtures for demo environment (locations, devices, providers, profiles, resource pools)
+   - `permissions.yml` - RBAC configuration (operator role/group, `john` user account)
+   - `menu.yml` - Custom Infrahub menu structure for locations, devices, and services
 
 5. **Semaphore (Ansible Automation)** (`ansible/`, `semaphore/`)
    - Open-source web UI (SemaphoreUI) for running Ansible playbooks
@@ -35,6 +37,7 @@
 - **Service Lifecycle**: Services move through states (pending -> active) with associated resource provisioning
 - **Type Safety**: Comprehensive type hints with mypy validation
 - **Configuration Deployment**: Semaphore runs Ansible playbooks that pull generated artifacts from Infrahub and deploy them to devices
+- **Demo Initialization**: `invoke init` seeds Semaphore and loads repository configuration + permissions into Infrahub
 
 ## Environment Configuration
 

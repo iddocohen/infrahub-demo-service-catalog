@@ -87,6 +87,7 @@ end_user
 Entra
 enum
 enums
+Equinix
 env
 eslint
 Evolvability
@@ -337,3 +338,4 @@ YamlDefinitionProvider
 YamlDocumentSymbolProvider
 yamllint
 YouTube
+Zayo

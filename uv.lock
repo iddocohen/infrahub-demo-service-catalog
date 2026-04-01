@@ -535,6 +535,7 @@ version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "fast-depends" },
+    { name = "httpx" },
     { name = "infrahub-sdk", extra = ["all"] },
     { name = "invoke" },
     { name = "streamlit" },
@@ -559,7 +560,8 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "fast-depends", specifier = ">=3.0.3,<4.0.0" },
-    { name = "infrahub-sdk", extras = ["all"], specifier = ">=1.17.0,<2.0.0" },
+    { name = "httpx", specifier = ">=0.27.2" },
+    { name = "infrahub-sdk", extras = ["all"], specifier = ">=1.19.0,<2.0.0" },
     { name = "invoke", specifier = ">=2.2.1,<3.0.0" },
     { name = "streamlit", specifier = ">=1.51.0,<2.0.0" },
     { name = "watchdog", specifier = ">=6.0.0,<7.0.0" },
@@ -567,7 +569,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "infrahub-testcontainers", specifier = ">=1.7.7" },
+    { name = "infrahub-testcontainers", specifier = ">=1.8.2" },
     { name = "mypy", specifier = ">=1.19.1" },
     { name = "pytest", specifier = ">=8.0.0,<10" },
     { name = "pytest-asyncio", specifier = ">=0.23.0,<1" },
@@ -582,7 +584,7 @@ dev = [
 
 [[package]]
 name = "infrahub-sdk"
-version = "1.17.0"
+version = "1.19.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dulwich" },
@@ -595,9 +597,9 @@ dependencies = [
     { name = "ujson" },
     { name = "whenever" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/08/60/47f22fea92421085c449be78ad7219c66e2417978cd73a05aeb5c5159562/infrahub_sdk-1.17.0.tar.gz", hash = "sha256:2eca77193a855efe9819374e3d5c53eabcfcf13e3af90cc294d327b3844c41d0", size = 749554, upload-time = "2025-12-11T08:18:04.604Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e8/43/86aa7711e89e4abea8216b462c43d46d298cb076fc53db1b05a91eabdcc7/infrahub_sdk-1.19.0.tar.gz", hash = "sha256:a397d1ea5c3747cf661cdab99cc4339886458afc246e14e13de72d5bc0dae3bd", size = 874068, upload-time = "2026-03-16T15:27:29.431Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/6b/66/b95ea7f7e228d62e111ae1b79659a84bc1cfaf61781d3edd6b2194ca8cfc/infrahub_sdk-1.17.0-py3-none-any.whl", hash = "sha256:e5f0d016e7a2276cb87c9268596bfa0e23aa17c3397270c218be30812d4150a9", size = 194423, upload-time = "2025-12-11T08:18:03.077Z" },
+    { url = "https://files.pythonhosted.org/packages/17/4d/4302c2cde325fdb486736da3b71b309041c69b23cd9b39707aa4b5bedf02/infrahub_sdk-1.19.0-py3-none-any.whl", hash = "sha256:40f9e31b83a8ed472f5b49f77f7158620f33ee05c74cb0ca29e9397918be7db4", size = 212058, upload-time = "2026-03-16T15:27:27.948Z" },
 ]
 
 [package.optional-dependencies]
@@ -616,7 +618,7 @@ all = [
 
 [[package]]
 name = "infrahub-testcontainers"
-version = "1.7.7"
+version = "1.8.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
@@ -626,9 +628,9 @@ dependencies = [
     { name = "pytest" },
     { name = "testcontainers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8d/95/919eb3feca21db4df8bf7985f9edaf0cdd85975b3817d7c4882e27b7c16b/infrahub_testcontainers-1.7.7.tar.gz", hash = "sha256:ab89a74ab89d459045a70ce1f7d1c2b5de9690e95c87b804d8e463d8ec4e9695", size = 16449, upload-time = "2026-03-12T14:14:17.724Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/bf/f221522c9f0ea4d63f123a8cb12d011b4a2d9a59330277d320e16c4aa3a5/infrahub_testcontainers-1.8.2.tar.gz", hash = "sha256:30100d57c3da404e754b8637a68405f42e36d50782277fa802c17471d73820e4", size = 17334, upload-time = "2026-03-25T14:49:05.921Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e4/e4/771399a4c7883bcf3935bcef402de04eee4f06d2e310627ca9b8797254e1/infrahub_testcontainers-1.7.7-py3-none-any.whl", hash = "sha256:740165807c6429d2732231b428b091404478f1cfa9c8329f4add190a1497f039", size = 23203, upload-time = "2026-03-12T14:14:16.556Z" },
+    { url = "https://files.pythonhosted.org/packages/7e/66/f5148659cec74c8bee6c8f0b36cee55686ce012fbc4c52010491e0eca350/infrahub_testcontainers-1.8.2-py3-none-any.whl", hash = "sha256:e11fa65627c1b845858588d2f20089beb60185f7c24a67347943273f65da7171", size = 23182, upload-time = "2026-03-25T14:49:04.66Z" },
 ]
 
 [[package]]
